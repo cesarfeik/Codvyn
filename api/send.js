@@ -1,29 +1,23 @@
-﻿require('dotenv').config();
-const express  = require('express');
 const nodemailer = require('nodemailer');
-const path     = require('path');
 
-const app = express();
-app.use(express.json());
-app.use(express.static(path.join(__dirname)));
+module.exports = async (req, res) => {
+  if (req.method !== 'POST') return res.status(405).end();
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASS,
-  },
-});
-
-app.post('/api/send', async (req, res) => {
   const { nombre, email, negocio, mensaje } = req.body;
 
   if (!nombre || !email || !negocio) {
     return res.status(400).json({ ok: false, error: 'Faltan campos requeridos.' });
   }
 
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_APP_PASS,
+    },
+  });
+
   try {
-    // 1. Notificación interna a mycodvyn@gmail.com
     await transporter.sendMail({
       from: `"Codvyn Web" <${process.env.GMAIL_USER}>`,
       to: 'mycodvyn@gmail.com',
@@ -43,7 +37,6 @@ app.post('/api/send', async (req, res) => {
       `,
     });
 
-    // 2. Confirmación automática al cliente
     await transporter.sendMail({
       from: `"Codvyn" <${process.env.GMAIL_USER}>`,
       to: email,
@@ -63,7 +56,7 @@ app.post('/api/send', async (req, res) => {
             <p style="margin:0;font-size:14px;"><strong>Tipo de negocio:</strong> ${negocio}</p>
           </div>
           <p style="color:#999;font-size:13px;line-height:1.5;margin:0;">
-            Si tienes alguna pregunta urgente, puedes escribirnos directamente a
+            Si tienes alguna pregunta urgente puedes escribirnos a
             <a href="mailto:mycodvyn@gmail.com" style="color:#0ABBA5;">mycodvyn@gmail.com</a> o por
             <a href="https://wa.me/525515255638" style="color:#0ABBA5;">WhatsApp</a>.
           </p>
@@ -78,7 +71,4 @@ app.post('/api/send', async (req, res) => {
     console.error('Error enviando correo:', err);
     res.status(500).json({ ok: false, error: 'Error al enviar el correo.' });
   }
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
+};

@@ -816,7 +816,7 @@ async function handleForm(e) {
   formError.classList.add('hidden');
 
   try {
-    const res = await fetch('/send', {
+    const res = await fetch('/api/send', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(datos),
