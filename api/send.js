@@ -46,9 +46,80 @@ module.exports = async (req, res) => {
     await transporter.sendMail({
       from: '"Codvyn" <' + process.env.GMAIL_USER + '>',
       to: email,
-      subject: 'Codvyn recibio tu mensaje, ' + nombre,
-      text: 'Hola ' + nombre + ',\n\nRecibimos tu solicitud para tu ' + negocio + '. Te contactaremos en menos de 24 horas.\n\nWhatsApp: https://wa.me/525515255638\nCorreo: mycodvyn@gmail.com\n\nEquipo Codvyn',
-      html: '<div style="font-family:Helvetica,Arial,sans-serif;max-width:560px;margin:auto;background:#f4f4f5;border-radius:12px;overflow:hidden;"><div style="background:#000;padding:28px;text-align:center;"><span style="color:#0ABBA5;font-weight:800;font-size:22px;">Codvyn</span></div><div style="background:#fff;padding:32px;text-align:center;"><div style="display:inline-block;background:#0ABBA5;width:52px;height:52px;border-radius:50%;line-height:52px;text-align:center;"><span style="color:#000;font-size:24px;font-weight:700;">&#10003;</span></div><h1 style="margin:16px 0 6px;color:#111;font-size:20px;font-weight:800;">Mensaje recibido</h1><p style="margin:0 0 24px;color:#777;font-size:14px;">Hola <b style="color:#111;">' + nombre + '</b>, gracias por contactarnos.</p><p style="margin:0 0 20px;color:#555;font-size:14px;line-height:1.7;text-align:left;">Recibimos tu solicitud para tu <b>' + negocio + '</b>. Nuestro equipo la esta revisando y te contactaremos con una propuesta personalizada.</p><div style="background:#f9f9f9;border-radius:10px;border:1px solid #eee;padding:20px;margin-bottom:20px;"><p style="margin:0 0 4px;color:#0ABBA5;font-size:26px;font-weight:800;">24 hrs</p><p style="margin:0;color:#888;font-size:12px;">Tiempo maximo de respuesta</p></div><table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding-right:6px;"><a href="https://wa.me/525515255638" style="display:block;background:#000;color:#fff;font-size:12px;font-weight:600;padding:11px;border-radius:100px;text-decoration:none;text-align:center;">WhatsApp</a></td><td style="padding-left:6px;"><a href="mailto:mycodvyn@gmail.com" style="display:block;background:#f4f4f5;color:#111;font-size:12px;font-weight:600;padding:11px;border-radius:100px;text-decoration:none;text-align:center;border:1px solid #ddd;">Correo</a></td></tr></table></div><div style="background:#fafafa;padding:16px;border-top:1px solid #eee;"><p style="margin:0;color:#bbb;font-size:11px;text-align:center;">2025 Codvyn · Recibiste este correo porque llenaste nuestro formulario</p></div></div>',
+      subject: 'Gracias ' + nombre + ', recibimos tu solicitud',
+      text: 'Hola ' + nombre + ',\n\nGracias por contactarnos. Recibimos tu solicitud y ya estamos trabajando en una propuesta personalizada para tu ' + negocio + '.\n\nNos pondremos en contacto contigo en menos de 24 horas.\n\nEquipo Codvyn\nmycodvyn@gmail.com',
+      html: `<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#0d0d0d;font-family:Helvetica,Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#0d0d0d;padding:48px 16px;">
+  <tr><td align="center">
+    <table width="540" cellpadding="0" cellspacing="0" style="max-width:540px;width:100%;">
+
+      <!-- Logo -->
+      <tr><td style="padding-bottom:32px;text-align:center;">
+        <span style="color:#0ABBA5;font-weight:800;font-size:22px;letter-spacing:-0.5px;">Codvyn</span>
+      </td></tr>
+
+      <!-- Card principal -->
+      <tr><td style="background:#161616;border-radius:20px;overflow:hidden;border:1px solid #222;">
+
+        <!-- Franja verde superior -->
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr><td style="background:linear-gradient(135deg,#0ABBA5,#07a090);padding:40px 36px;text-align:center;">
+            <div style="display:inline-block;background:rgba(0,0,0,0.15);border-radius:50%;width:64px;height:64px;line-height:64px;text-align:center;margin-bottom:16px;">
+              <span style="color:#fff;font-size:30px;font-weight:700;">&#10003;</span>
+            </div>
+            <h1 style="margin:0 0 6px;color:#fff;font-size:24px;font-weight:800;letter-spacing:-0.3px;">Solicitud recibida</h1>
+            <p style="margin:0;color:rgba(255,255,255,0.8);font-size:14px;">Tu mensaje llego correctamente</p>
+          </td></tr>
+        </table>
+
+        <!-- Cuerpo -->
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr><td style="padding:36px;">
+
+            <p style="margin:0 0 6px;color:#888;font-size:13px;">Hola,</p>
+            <h2 style="margin:0 0 20px;color:#fff;font-size:20px;font-weight:700;">${nombre} 👋</h2>
+
+            <p style="margin:0 0 28px;color:#aaa;font-size:14px;line-height:1.8;">
+              Gracias por ponerte en contacto con nosotros. Recibimos tu solicitud de cotizacion para tu <span style="color:#fff;font-weight:600;">${negocio}</span> y ya la tenemos en nuestras manos.
+            </p>
+
+            <!-- Bloque destacado -->
+            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+              <tr>
+                <td style="background:#0f0f0f;border-radius:14px;border:1px solid #1e1e1e;padding:24px;text-align:center;">
+                  <p style="margin:0 0 4px;color:#555;font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:600;">Tiempo de respuesta</p>
+                  <p style="margin:0;color:#0ABBA5;font-size:42px;font-weight:800;letter-spacing:-1px;">24 hrs</p>
+                  <p style="margin:4px 0 0;color:#555;font-size:12px;">maximo — generalmente antes</p>
+                </td>
+              </tr>
+            </table>
+
+            <p style="margin:0;color:#555;font-size:13px;line-height:1.7;text-align:center;">
+              Nos pondremos en contacto contigo a este correo<br>
+              <span style="color:#0ABBA5;">${email}</span>
+            </p>
+
+          </td></tr>
+        </table>
+
+      </td></tr>
+
+      <!-- Footer -->
+      <tr><td style="padding-top:28px;text-align:center;">
+        <p style="margin:0;color:#333;font-size:11px;line-height:1.7;">
+          © 2025 Codvyn · Paginas web para negocios locales<br>
+          Recibiste este correo porque llenaste nuestro formulario de contacto.
+        </p>
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>`,
     });
     console.log('Correo cliente OK:', email);
     res.json({ ok: true });
