@@ -643,26 +643,51 @@
     <!-- Formulario -->
     <div id="form-wrapper">
       <form id="contact-form" onsubmit="handleForm(event)" class="space-y-4">
-        <div>
-          <label class="text-gray-400 text-xs font-medium block mb-1.5">Nombre</label>
-          <input type="text" name="nombre" required placeholder="Tu nombre" class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200 placeholder-gray-600">
+        <!-- Fila nombre + teléfono -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-gray-400 text-xs font-medium block mb-1.5">Nombre *</label>
+            <input type="text" name="nombre" required placeholder="Tu nombre" class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200 placeholder-gray-600">
+          </div>
+          <div>
+            <label class="text-gray-400 text-xs font-medium block mb-1.5">Teléfono</label>
+            <input type="tel" name="telefono" placeholder="10 dígitos" class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200 placeholder-gray-600">
+          </div>
         </div>
         <div>
-          <label class="text-gray-400 text-xs font-medium block mb-1.5">Correo electrónico</label>
+          <label class="text-gray-400 text-xs font-medium block mb-1.5">Correo electrónico *</label>
           <input type="email" name="email" required placeholder="tucorreo@ejemplo.com" class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200 placeholder-gray-600">
         </div>
-        <div>
-          <label class="text-gray-400 text-xs font-medium block mb-1.5">Tipo de negocio</label>
-          <select name="negocio" required class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200">
-            <option value="" class="text-gray-600">Selecciona tu tipo de negocio</option>
-            <option>Barbería</option>
-            <option>Estética</option>
-            <option>Consultorio</option>
-            <option>Cafetería</option>
-            <option>Restaurante</option>
-            <option>Emprendedor</option>
-            <option>Otro</option>
-          </select>
+        <!-- Fila negocio + urgencia -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-gray-400 text-xs font-medium block mb-1.5">Tipo de negocio *</label>
+            <select name="negocio" id="negocio-select" required onchange="toggleOtroNegocio(this)" class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200">
+              <option value="">Selecciona...</option>
+              <option>Barbería</option>
+              <option>Estética</option>
+              <option>Consultorio</option>
+              <option>Cafetería</option>
+              <option>Restaurante</option>
+              <option>Emprendedor</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-gray-400 text-xs font-medium block mb-1.5">¿Cuándo lo necesitas?</label>
+            <select name="urgencia" class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200">
+              <option value="">Sin fecha definida</option>
+              <option>Lo antes posible</option>
+              <option>En 2 semanas</option>
+              <option>En 1 mes</option>
+              <option>Estoy explorando opciones</option>
+            </select>
+          </div>
+        </div>
+        <!-- Campo "Otro negocio" oculto -->
+        <div id="otro-negocio-wrap" class="hidden">
+          <label class="text-gray-400 text-xs font-medium block mb-1.5">¿Cuál es tu tipo de negocio? *</label>
+          <input type="text" name="negocio_otro" id="negocio-otro" placeholder="Describe tu negocio" class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200 placeholder-gray-600">
         </div>
         <div>
           <label class="text-gray-400 text-xs font-medium block mb-1.5">¿Qué necesitas?</label>
@@ -673,7 +698,7 @@
           <svg id="btn-spinner" class="hidden w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg>
         </button>
         <p id="form-error" class="hidden text-red-400 text-xs text-center">Ocurrió un error al enviar. Por favor intenta de nuevo.</p>
-        <p class="text-gray-600 text-xs text-center">Te enviaremos una confirmación a tu correo en instantes.</p>
+        <p class="text-gray-600 text-xs text-center">* Campos obligatorios · Te respondemos en menos de 24 hrs.</p>
       </form>
       <!-- Estado de éxito -->
       <div id="form-success" class="hidden text-center py-10 space-y-4">
@@ -795,6 +820,19 @@ mobileMenu.addEventListener('click', (e) => {
   if (e.target === mobileMenu) closeMobileMenu();
 });
 
+function toggleOtroNegocio(sel) {
+  const wrap = document.getElementById('otro-negocio-wrap');
+  const input = document.getElementById('negocio-otro');
+  if (sel.value === 'Otro') {
+    wrap.classList.remove('hidden');
+    input.required = true;
+  } else {
+    wrap.classList.add('hidden');
+    input.required = false;
+    input.value = '';
+  }
+}
+
 async function handleForm(e) {
   e.preventDefault();
   const form      = e.target;
@@ -803,11 +841,26 @@ async function handleForm(e) {
   const btnSubmit = document.getElementById('submit-btn');
   const formError = document.getElementById('form-error');
 
+  const negocioSelect = form.negocio.value;
+  const negocioFinal = negocioSelect === 'Otro'
+    ? (form.negocio_otro.value.trim() || 'Otro')
+    : negocioSelect;
+
+  if (negocioSelect === 'Otro' && !form.negocio_otro.value.trim()) {
+    document.getElementById('negocio-otro').focus();
+    btnText.textContent = 'Enviar cotización →';
+    btnSpin.classList.add('hidden');
+    btnSubmit.disabled = false;
+    return;
+  }
+
   const datos = {
-    nombre:  form.nombre.value.trim(),
-    email:   form.email.value.trim(),
-    negocio: form.negocio.value,
-    mensaje: form.mensaje.value.trim(),
+    nombre:   form.nombre.value.trim(),
+    email:    form.email.value.trim(),
+    negocio:  negocioFinal,
+    telefono: form.telefono.value.trim(),
+    urgencia: form.urgencia.value,
+    mensaje:  form.mensaje.value.trim(),
   };
 
   btnText.textContent = 'Enviando…';
