@@ -59,7 +59,7 @@ module.exports = async (req, res) => {
 
       <!-- Logo -->
       <tr><td style="padding-bottom:24px;text-align:center;">
-        <img src="${LOGO_URL}" alt="Codvyn" height="36" style="height:36px;display:inline-block;" onerror="this.style.display='none'">
+        <img src="${LOGO_URL}" alt="Codvyn" height="108" style="height:108px;display:inline-block;" onerror="this.style.display='none'">
       </td></tr>
 
       <!-- Card -->
@@ -139,7 +139,7 @@ module.exports = async (req, res) => {
 
       <!-- Logo -->
       <tr><td style="padding-bottom:24px;text-align:center;">
-        <img src="${LOGO_URL}" alt="Codvyn" height="36" style="height:36px;display:inline-block;" onerror="this.style.display='none'">
+        <img src="${LOGO_URL}" alt="Codvyn" height="108" style="height:108px;display:inline-block;" onerror="this.style.display='none'">
       </td></tr>
 
       <!-- Card -->
