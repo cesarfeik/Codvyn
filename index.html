@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codvyn — Páginas Web Profesionales para Negocios Locales</title>
+  <meta name="description" content="Diseño y desarrollo de páginas web profesionales para barberías, estéticas, cafeterías, consultorios y negocios locales. Rápido, moderno y orientado a resultados.">
+  <meta name="keywords" content="páginas web negocios locales, diseño web profesional, página web barbería, página web cafetería, página web consultorio, Codvyn, César Rodríguez">
+  <meta name="author" content="Codvyn">
+  <meta property="og:title" content="Codvyn — Páginas Web Profesionales">
+  <meta property="og:description" content="Haz que tu negocio se vea profesional y consiga más clientes online.">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: '#0ABBA5' },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    * { -webkit-font-smoothing: antialiased; }
+    .transition-all-200 { transition: all 0.2s ease; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up { animation: fadeUp 0.6s ease-out both; }
+  </style>
+</head>
+<body class="font-sans bg-white text-gray-900">
+
+<!-- ============================================================ NAVBAR -->
+<nav id="navbar" class="px-8 py-4 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <!-- Logo: reemplaza la imagen cuando tengas el archivo del logo -->
+  <a href="#inicio" class="flex items-center gap-2">
+    <img src="logo.png" alt="Codvyn" class="h-[140px] w-auto" style="filter: brightness(0) invert(1);">
+  </a>
+  <div class="hidden md:flex items-center space-x-10 text-2xl font-medium text-white">
+    <a href="#servicios" class="hover:text-white transition-all-200">Servicios</a>
+    <a href="#portafolio" class="hover:text-white transition-all-200">Portafolio</a>
+    <a href="#sobre-nosotros" class="hover:text-white transition-all-200">Sobre nosotros</a>
+    <a href="#testimonios" class="hover:text-white transition-all-200">Testimonios</a>
+    <a href="#contacto" class="hover:text-white transition-all-200">Contacto</a>
+  </div>
+  <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20me%20interesa%20cotizar%20una%20p%C3%A1gina%20web"
+     target="_blank" rel="noopener"
+     class="bg-[#0ABBA5] text-black text-sm font-semibold px-4 py-2 rounded-full hover:bg-[#09a494] transition-all-200 flex items-center gap-2">
+    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.543 4.072 1.495 5.787L0 24l6.385-1.467A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.214-3.726.856.873-3.631-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+    Cotizar gratis
+  </a>
+</nav>
+
+<!-- ============================================================ HERO -->
+<section id="inicio" class="relative min-h-screen flex items-center overflow-hidden">
+  <!-- Imagen de fondo -->
+  <div class="absolute inset-0 z-0">
+    <img src="imagen 2.png" class="w-full h-full object-cover object-center" alt="">
+    <!-- Degradado oscuro de izquierda a derecha para legibilidad del texto -->
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.92) 35%, rgba(0,0,0,0.55) 65%, rgba(0,0,0,0.2) 100%);"></div>
+    <!-- Degradado inferior para transición suave a la siguiente sección -->
+    <div class="absolute bottom-0 left-0 right-0 h-32" style="background: linear-gradient(to bottom, transparent, #000);"></div>
+  </div>
+  <!-- Glow teal sutil -->
+  <div class="absolute inset-0 z-0 pointer-events-none" style="background: radial-gradient(ellipse at 5% 60%, rgba(10,187,165,0.1) 0%, transparent 50%);"></div>
+
+  <!-- Contenido -->
+  <div class="max-w-6xl mx-auto px-8 relative z-10 py-32 w-full">
+    <div class="max-w-2xl fade-up">
+      <span class="inline-block bg-[#0ABBA5]/15 text-[#0ABBA5] text-xs font-semibold px-4 py-2 rounded-full mb-7 border border-[#0ABBA5]/30 tracking-wide">✦ Desarrollo Web Profesional para Negocios Locales</span>
+      <h1 class="text-white font-extrabold leading-[1.1] mb-6" style="font-size: clamp(2.8rem, 5vw, 4.5rem);">
+        Tu negocio merece una presencia online que <span class="text-[#0ABBA5]">genere clientes reales</span>
+      </h1>
+      <p class="text-gray-300 text-base leading-relaxed mb-10 max-w-md">
+        Diseñamos sitios web modernos para cafeterías, barberías, estéticas y negocios locales. Rápido, profesional y orientado a resultados.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20me%20interesa%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio"
+           target="_blank" rel="noopener"
+           class="bg-[#0ABBA5] text-black font-semibold px-7 py-3.5 rounded-full text-sm hover:bg-[#09a494] transition-all-200 flex items-center gap-2"
+           style="box-shadow: 0 0 40px rgba(10,187,165,0.4);">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.543 4.072 1.495 5.787L0 24l6.385-1.467A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.214-3.726.856.873-3.631-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+        <a href="#servicios" class="border border-white/30 text-white font-semibold px-7 py-3.5 rounded-full text-sm hover:border-[#0ABBA5] hover:text-[#0ABBA5] transition-all-200 backdrop-blur-sm">Ver servicios ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ INDUSTRIAS SCROLL -->
+<section class="bg-black pb-16 px-8 overflow-hidden">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex gap-3">
+      <!-- Cafeterías — primer lugar para reflejar el nicho principal -->
+      <div class="w-52 flex-shrink-0 bg-gray-900 rounded-2xl overflow-hidden h-64 flex flex-col hover:bg-gray-800 transition-all-200 cursor-default border border-[#0ABBA5]/30">
+        <div class="flex-1 flex items-center justify-center pt-6">
+          <svg class="w-12 h-12 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.3"><path stroke-linecap="round" stroke-linejoin="round" d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+        </div>
+        <div class="p-4">
+          <p class="text-[#0ABBA5] text-xs font-semibold mb-0.5">✦ Especialidad</p>
+          <p class="text-white text-sm font-semibold">Cafeterías</p>
+          <p class="text-gray-400 text-xs mt-1">Menú digital, horarios y reservas</p>
+        </div>
+      </div>
+      <div class="w-52 flex-shrink-0 bg-gray-900 rounded-2xl overflow-hidden h-64 flex flex-col hover:bg-gray-800 transition-all-200 cursor-default">
+        <div class="flex-1 flex items-center justify-center pt-6">
+          <svg class="w-12 h-12 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.3"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7a5 5 0 110-10 5 5 0 010 10zm0 0a7 7 0 01-7 7"/></svg>
+        </div>
+        <div class="p-4">
+          <p class="text-white text-sm font-semibold">Barberías</p>
+          <p class="text-gray-400 text-xs mt-1">Reservas online, galería y precios</p>
+        </div>
+      </div>
+      <div class="w-52 flex-shrink-0 bg-gray-900 rounded-2xl overflow-hidden h-64 flex flex-col hover:bg-gray-800 transition-all-200 cursor-default">
+        <div class="flex-1 flex items-center justify-center pt-6">
+          <svg class="w-12 h-12 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <div class="p-4">
+          <p class="text-white text-sm font-semibold">Estéticas</p>
+          <p class="text-gray-400 text-xs mt-1">Servicios, portafolio y contacto</p>
+        </div>
+      </div>
+      <div class="w-52 flex-shrink-0 bg-gray-900 rounded-2xl overflow-hidden h-64 flex flex-col hover:bg-gray-800 transition-all-200 cursor-default">
+        <div class="flex-1 flex items-center justify-center pt-6">
+          <svg class="w-12 h-12 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.3"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <div class="p-4">
+          <p class="text-white text-sm font-semibold">Consultorios</p>
+          <p class="text-gray-400 text-xs mt-1">Citas, especialidades y ubicación</p>
+        </div>
+      </div>
+      <div class="w-52 flex-shrink-0 bg-gray-900 rounded-2xl overflow-hidden h-64 flex flex-col hover:bg-gray-800 transition-all-200 cursor-default">
+        <div class="flex-1 flex items-center justify-center pt-6">
+          <svg class="w-12 h-12 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.3"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <div class="p-4">
+          <p class="text-white text-sm font-semibold">Restaurantes</p>
+          <p class="text-gray-400 text-xs mt-1">Carta digital, reservas y mapa</p>
+        </div>
+      </div>
+      <div class="w-52 flex-shrink-0 bg-gray-900 rounded-2xl overflow-hidden h-64 flex flex-col hover:bg-gray-800 transition-all-200 cursor-default">
+        <div class="flex-1 flex items-center justify-center pt-6">
+          <svg class="w-12 h-12 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <div class="p-4">
+          <p class="text-white text-sm font-semibold">Emprendedores</p>
+          <p class="text-gray-400 text-xs mt-1">Landing page para lanzar tu idea</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ STATS BAR -->
+<section class="bg-white py-10 px-8 border-b border-gray-100">
+  <div class="max-w-6xl mx-auto flex flex-wrap items-center gap-10 justify-between">
+    <p class="text-gray-500 text-sm leading-snug max-w-[200px]">Negocios locales que ya tienen presencia profesional online.</p>
+    <div class="flex flex-wrap gap-10">
+      <div class="text-center">
+        <p class="text-2xl font-bold text-gray-900">50+</p>
+        <p class="text-gray-400 text-xs mt-0.5">Proyectos entregados</p>
+      </div>
+      <div class="text-center">
+        <p class="text-2xl font-bold text-gray-900">100%</p>
+        <p class="text-gray-400 text-xs mt-0.5">Sitios responsive</p>
+      </div>
+      <div class="text-center">
+        <p class="text-2xl font-bold text-gray-900">72h</p>
+        <p class="text-gray-400 text-xs mt-0.5">Tiempo de primera versión</p>
+      </div>
+      <div class="text-center">
+        <p class="text-2xl font-bold text-gray-900">5 ★</p>
+        <p class="text-gray-400 text-xs mt-0.5">Satisfacción de clientes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PROPUESTA DE VALOR -->
+<section class="bg-white py-24 px-8 text-center">
+  <div class="max-w-xl mx-auto">
+    <h2 class="text-4xl font-bold text-gray-900 mb-4">Una web profesional es la mejor inversión para tu negocio</h2>
+    <p class="text-gray-500 text-base mb-8 leading-relaxed">Tus clientes buscan en Google antes de ir a cualquier lugar. Si no apareces, tu competencia se queda con ellos. Yo creo sitios que generan confianza y convierten visitas en clientes reales.</p>
+    <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20me%20interesa%20cotizar%20una%20p%C3%A1gina%20web"
+       target="_blank" rel="noopener"
+       class="inline-block bg-[#0ABBA5] text-black font-semibold px-6 py-3 rounded-full text-sm hover:bg-[#09a494] transition-all-200">Cotizar gratis →</a>
+  </div>
+</section>
+
+
+<!-- ============================================================ TESTIMONIO DESTACADO -->
+<section id="testimonios" class="bg-white py-20 px-8 border-t border-gray-100">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <blockquote class="text-3xl font-bold text-gray-900 leading-snug mb-6">"Mucha gente entró por primera vez porque vio mi página. Mi cafetería se ve increíble en internet y el proceso fue muy sencillo. César lo entregó todo en tiempo récord."</blockquote>
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">PM</div>
+        <div>
+          <p class="text-sm font-semibold text-gray-900">Patricia Morales</p>
+          <p class="text-sm text-gray-500">Dueña · Cafetería La Canela, Puebla</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="imagen 1.png" class="w-full rounded-2xl object-cover" alt="Cafetería La Canela">
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ STATS 2 -->
+<section class="bg-white py-12 px-8 border-t border-gray-100">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+    <div>
+      <p class="text-gray-800 text-sm font-semibold mb-1">Diseño que convierte visitas en clientes</p>
+      <p class="text-gray-400 text-xs leading-relaxed">No se trata solo de tener una web bonita. Cada elemento está pensado para que quien llegue quiera contactarte, llamarte o visitarte.</p>
+    </div>
+    <div class="grid grid-cols-3 gap-6">
+      <div>
+        <p class="text-2xl font-bold text-gray-900">50+</p>
+        <p class="text-gray-400 text-xs mt-1">Sitios entregados</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold text-gray-900">95%</p>
+        <p class="text-gray-400 text-xs mt-1">Clientes satisfechos</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold text-gray-900">100%</p>
+        <p class="text-gray-400 text-xs mt-1">Mobile-first</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CTA DARK -->
+<section class="bg-black py-24 px-8 text-center">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-white text-5xl font-bold mb-4">Tu negocio merece estar en internet hoy</h2>
+    <p class="text-gray-400 text-base mb-8 leading-relaxed">No esperes más. Una página web profesional es el primer paso para crecer. En 72 horas tendrás la primera versión de tu sitio lista.</p>
+    <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio"
+       target="_blank" rel="noopener"
+       class="inline-block bg-[#0ABBA5] text-black font-semibold px-6 py-3 rounded-full text-sm hover:bg-[#09a494] transition-all-200">Empezar ahora →</a>
+  </div>
+</section>
+
+<!-- ============================================================ PROCESO -->
+<section id="proceso" class="bg-black pb-14 px-8">
+  <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="bg-gray-900 rounded-2xl p-5 hover:bg-gray-800 transition-all-200">
+      <div class="w-9 h-9 bg-[#0ABBA5]/10 rounded-xl flex items-center justify-center mb-3">
+        <svg class="w-5 h-5 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      </div>
+      <p class="text-[#0ABBA5] text-xs font-semibold mb-1">01</p>
+      <p class="text-white text-sm font-semibold">Diagnóstico</p>
+      <p class="text-gray-400 text-xs mt-0.5 leading-relaxed">Entendemos tu negocio, tus clientes y tus metas.</p>
+    </div>
+    <div class="bg-gray-900 rounded-2xl p-5 hover:bg-gray-800 transition-all-200">
+      <div class="w-9 h-9 bg-[#0ABBA5]/10 rounded-xl flex items-center justify-center mb-3">
+        <svg class="w-5 h-5 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      </div>
+      <p class="text-[#0ABBA5] text-xs font-semibold mb-1">02</p>
+      <p class="text-white text-sm font-semibold">Diseño</p>
+      <p class="text-gray-400 text-xs mt-0.5 leading-relaxed">Creamos la maqueta visual de tu sitio para tu aprobación.</p>
+    </div>
+    <div class="bg-gray-900 rounded-2xl p-5 hover:bg-gray-800 transition-all-200">
+      <div class="w-9 h-9 bg-[#0ABBA5]/10 rounded-xl flex items-center justify-center mb-3">
+        <svg class="w-5 h-5 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+      </div>
+      <p class="text-[#0ABBA5] text-xs font-semibold mb-1">03</p>
+      <p class="text-white text-sm font-semibold">Desarrollo</p>
+      <p class="text-gray-400 text-xs mt-0.5 leading-relaxed">Construimos tu sitio rápido, responsive y optimizado.</p>
+    </div>
+    <div class="bg-gray-900 rounded-2xl p-5 hover:bg-gray-800 transition-all-200">
+      <div class="w-9 h-9 bg-[#0ABBA5]/10 rounded-xl flex items-center justify-center mb-3">
+        <svg class="w-5 h-5 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <p class="text-[#0ABBA5] text-xs font-semibold mb-1">04</p>
+      <p class="text-white text-sm font-semibold">Entrega</p>
+      <p class="text-gray-400 text-xs mt-0.5 leading-relaxed">Publicamos y te entregamos tu sitio listo para recibir clientes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SOBRE NOSOTROS -->
+<section id="sobre-nosotros" class="bg-white py-20 px-8">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+    <div>
+      <span class="text-[#0ABBA5] text-xs font-semibold uppercase tracking-widest">Sobre nosotros</span>
+      <h2 class="text-4xl font-bold text-gray-900 leading-tight mt-2 mb-5">Somos Codvyn</h2>
+      <p class="text-gray-500 text-base leading-relaxed mb-5">En Codvyn nos especializamos en crear sitios web modernos y efectivos para negocios locales: cafeterías, barberías, estéticas, consultorios y emprendedores. Nuestro objetivo es simple: que tu negocio se vea profesional en internet y eso se traduzca en más clientes reales.</p>
+      <p class="text-gray-500 text-base leading-relaxed mb-7">Trabajamos directamente contigo, sin intermediarios, con comunicación clara y entregas rápidas. Cada proyecto lo tratamos como si fuera nuestro propio negocio.</p>
+      <div class="flex flex-wrap gap-2 mb-7">
+        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-full">HTML · CSS · JavaScript</span>
+        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-full">Tailwind CSS</span>
+        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-full">SEO On-Page</span>
+        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-full">Responsive Design</span>
+        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-full">WhatsApp Business</span>
+        <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-full">Google Maps API</span>
+        <span class="bg-[#0ABBA5]/10 text-[#0ABBA5] text-xs px-3 py-1.5 rounded-full font-medium">Digitalización con AI</span>
+      </div>
+      <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20me%20interesa%20platicar%20sobre%20mi%20proyecto"
+         target="_blank" rel="noopener"
+         class="inline-block bg-[#0ABBA5] text-black font-semibold px-5 py-2.5 rounded-full text-sm hover:bg-[#09a494] transition-all-200">Hablar con Codvyn →</a>
+    </div>
+    <div class="flex items-center justify-center h-full">
+      <img src="logo 2.png" class="w-auto max-w-sm" alt="Codvyn — Identidad de marca">
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SERVICIOS -->
+<section id="servicios" class="bg-black py-16 px-8">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-[#0ABBA5] text-xs font-semibold uppercase tracking-widest">Servicios</span>
+      <h2 class="text-white text-4xl font-bold mt-2">Elige el paquete que necesita tu negocio</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-4">
+      <!-- Básico -->
+      <div class="bg-gray-900 rounded-2xl p-6 flex flex-col hover:bg-gray-800 transition-all-200">
+        <p class="text-[#0ABBA5] text-xs font-semibold mb-2">Paquete Básico</p>
+        <h3 class="text-white text-lg font-bold mb-1">Landing Page</h3>
+        <p class="text-gray-400 text-xs mb-5 leading-relaxed">Ideal para empezar. Una página de presentación profesional que muestra quién eres y cómo contactarte.</p>
+        <ul class="space-y-2 mb-6 flex-1">
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Landing page de 1 página</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Botón de WhatsApp directo</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Integración Google Maps</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Links a redes sociales</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>100% responsive</li>
+        </ul>
+        <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20me%20interesa%20el%20Paquete%20Básico"
+           target="_blank" rel="noopener"
+           class="w-full text-center border border-gray-600 text-white text-sm font-semibold py-2.5 rounded-full hover:border-[#0ABBA5] hover:text-[#0ABBA5] transition-all-200">Cotizar paquete →</a>
+      </div>
+      <!-- Intermedio -->
+      <div class="bg-gray-900 rounded-2xl p-6 flex flex-col border border-[#0ABBA5] relative hover:bg-gray-800 transition-all-200">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0ABBA5] text-black text-xs font-bold px-3 py-1 rounded-full">Más popular</span>
+        <p class="text-[#0ABBA5] text-xs font-semibold mb-2">Paquete Intermedio</p>
+        <h3 class="text-white text-lg font-bold mb-1">Sitio Completo</h3>
+        <p class="text-gray-400 text-xs mb-5 leading-relaxed">Para negocios que quieren destacar. Múltiples secciones, catálogo de servicios y formulario de contacto.</p>
+        <ul class="space-y-2 mb-6 flex-1">
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Sitio multi-sección completo</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Catálogo de servicios / menú</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Formulario de contacto</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>SEO básico (Google)</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Todo lo del paquete básico</li>
+        </ul>
+        <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20me%20interesa%20el%20Paquete%20Intermedio"
+           target="_blank" rel="noopener"
+           class="w-full text-center bg-[#0ABBA5] text-black text-sm font-semibold py-2.5 rounded-full hover:bg-[#09a494] transition-all-200">Cotizar paquete →</a>
+      </div>
+      <!-- Personalizado -->
+      <div class="bg-gray-900 rounded-2xl p-6 flex flex-col hover:bg-gray-800 transition-all-200">
+        <p class="text-[#0ABBA5] text-xs font-semibold mb-2">Paquete Personalizado</p>
+        <h3 class="text-white text-lg font-bold mb-1">A tu medida</h3>
+        <p class="text-gray-400 text-xs mb-5 leading-relaxed">¿Necesitas algo más específico? Cuéntame qué necesita tu negocio y armamos la propuesta ideal.</p>
+        <ul class="space-y-2 mb-6 flex-1">
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Todo el paquete intermedio</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Funciones a medida</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Automatizaciones</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Dominio y hosting incluido</li>
+          <li class="flex items-center gap-2 text-gray-300 text-xs"><svg class="w-4 h-4 text-[#0ABBA5] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Soporte post-entrega</li>
+        </ul>
+        <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20necesito%20un%20proyecto%20personalizado"
+           target="_blank" rel="noopener"
+           class="w-full text-center border border-gray-600 text-white text-sm font-semibold py-2.5 rounded-full hover:border-[#0ABBA5] hover:text-[#0ABBA5] transition-all-200">Cotizar paquete →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ HERRAMIENTAS -->
+<section class="bg-black py-20 px-8 text-center">
+  <div class="max-w-xl mx-auto">
+    <p class="text-white text-base font-semibold mb-2">Conectado con las herramientas que ya usas</p>
+    <p class="text-gray-400 text-sm mb-10">Tu página web trabaja junto con WhatsApp, Google, Instagram y más.</p>
+    <div class="flex justify-center items-center gap-3 mb-10 flex-wrap">
+      <div class="w-12 h-12 bg-green-900 rounded-2xl flex items-center justify-center" title="WhatsApp">
+        <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.543 4.072 1.495 5.787L0 24l6.385-1.467A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.214-3.726.856.873-3.631-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+      </div>
+      <div class="w-12 h-12 bg-blue-900 rounded-2xl flex items-center justify-center" title="Google Maps">
+        <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div class="w-12 h-12 bg-gradient-to-tr from-purple-900 to-pink-900 rounded-2xl flex items-center justify-center" title="Instagram">
+        <svg class="w-6 h-6 text-pink-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </div>
+      <div class="w-12 h-12 bg-blue-800 rounded-2xl flex items-center justify-center" title="Facebook">
+        <svg class="w-6 h-6 text-blue-300" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </div>
+      <div class="w-12 h-12 bg-red-900 rounded-2xl flex items-center justify-center" title="Google Analytics">
+        <svg class="w-6 h-6 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M22.84 2.998C22.84 1.342 21.498 0 19.842 0c-1.656 0-2.998 1.342-2.998 2.998v18.004c0 1.656 1.342 2.998 2.998 2.998 1.656 0 2.998-1.342 2.998-2.998V2.998zM13.499 8.997c0-1.656-1.342-2.998-2.998-2.998-1.656 0-2.998 1.342-2.998 2.998v12.005c0 1.656 1.342 2.998 2.998 2.998 1.656 0 2.998-1.342 2.998-2.998V8.997zM4.156 16.496c0-1.656-1.342-2.998-2.998-2.998C-.499 13.498 0 15.498 0 17.496v3.506C0 22.658 1.342 24 2.998 24c1.656 0 2.998-1.342 2.998-2.998l-.84-4.506z"/></svg>
+      </div>
+      <div class="w-12 h-12 bg-gray-800 rounded-2xl flex items-center justify-center" title="Google Search Console">
+        <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      </div>
+      <div class="w-12 h-12 bg-yellow-900 rounded-2xl flex items-center justify-center" title="Google Business">
+        <span class="text-yellow-400 font-bold text-sm">G</span>
+      </div>
+    </div>
+    <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20tengo%20preguntas%20sobre%20integraciones"
+       target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 border border-gray-600 text-white text-sm font-medium px-5 py-2.5 rounded-full hover:border-[#0ABBA5] hover:text-[#0ABBA5] transition-all-200">Preguntar sobre integraciones →</a>
+  </div>
+</section>
+
+<!-- ============================================================ BENEFICIOS -->
+<section class="bg-white py-24 px-8">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">¿Por qué tu negocio necesita una página web?</h2>
+      <p class="text-gray-500 text-base max-w-xl mx-auto leading-relaxed">El 97% de los consumidores buscan negocios locales en internet. Si no apareces, tu competencia se lleva esos clientes.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <div>
+        <div class="w-9 h-9 bg-[#0ABBA5]/10 rounded-xl flex items-center justify-center mb-3">
+          <svg class="w-5 h-5 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Visible en Google</h4>
+        <p class="text-gray-500 text-xs leading-relaxed">Tus clientes potenciales te encuentran cuando buscan lo que ofreces, incluso cuando estás cerrado.</p>
+      </div>
+      <div>
+        <div class="w-9 h-9 bg-[#0ABBA5]/10 rounded-xl flex items-center justify-center mb-3">
+          <svg class="w-5 h-5 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Genera confianza</h4>
+        <p class="text-gray-500 text-xs leading-relaxed">Una web profesional transmite seriedad y confianza. Los clientes confían más en negocios con presencia online.</p>
+      </div>
+      <div>
+        <div class="w-9 h-9 bg-[#0ABBA5]/10 rounded-xl flex items-center justify-center mb-3">
+          <svg class="w-5 h-5 text-[#0ABBA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-1">Disponible 24/7</h4>
+        <p class="text-gray-500 text-xs leading-relaxed">Tu página trabaja mientras duermes. Los clientes pueden ver tus servicios y contactarte a cualquier hora.</p>
+      </div>
+    </div>
+    <!-- Portfolio grid — dos imágenes protagonistas -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="relative rounded-2xl overflow-hidden group" style="min-height: 460px;">
+        <img src="imagen 4.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Café Roble">
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%);"></div>
+        <div class="absolute bottom-0 left-0 p-6">
+          <span class="text-[#0ABBA5] text-xs font-semibold uppercase tracking-widest">Cafetería</span>
+          <p class="text-white font-bold text-xl mt-1">Café Roble</p>
+          <p class="text-gray-300 text-sm mt-0.5">Puebla · Menú digital + reservas</p>
+        </div>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden group" style="min-height: 460px;">
+        <img src="imagen 5.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Consultorio Dental Flores">
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%);"></div>
+        <div class="absolute bottom-0 left-0 p-6">
+          <span class="text-[#0ABBA5] text-xs font-semibold uppercase tracking-widest">Consultorio</span>
+          <p class="text-white font-bold text-xl mt-1">Dental Flores</p>
+          <p class="text-gray-300 text-sm mt-0.5">Guadalajara · Citas + especialidades</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ TESTIMONIOS HEADING -->
+<section class="bg-black py-24 px-8 text-center relative overflow-hidden">
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="text-white text-5xl font-bold leading-tight mb-6">Lo que dicen los negocios que ya trabajan con Codvyn</h2>
+    <p class="text-gray-400 text-base mb-7">Resultados reales de emprendedores y dueños de negocios locales.</p>
+    <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20quiero%20saber%20más%20sobre%20tu%20trabajo"
+       target="_blank" rel="noopener"
+       class="inline-block border border-gray-600 text-white text-sm font-medium px-6 py-3 rounded-full hover:border-[#0ABBA5] hover:text-[#0ABBA5] transition-all-200">Hablar con César →</a>
+  </div>
+</section>
+
+<!-- ============================================================ TESTIMONIOS CARDS -->
+<section class="bg-black py-14 px-8 border-t border-gray-900">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-5">
+    <div class="space-y-4">
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-9 h-9 rounded-full bg-amber-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">MT</div>
+          <div>
+            <p class="text-white text-xs font-semibold">Miguel Torres</p>
+            <p class="text-gray-500 text-xs">Barbería Torres · CDMX</p>
+          </div>
+        </div>
+        <div class="flex gap-0.5 mb-2">★★★★★</div>
+        <p class="text-gray-300 text-xs leading-relaxed">"Las citas en mi barbería aumentaron desde que tenemos página. Mis clientes me mandan WhatsApp directo desde el sitio. César fue muy profesional y rápido."</p>
+      </div>
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-9 h-9 rounded-full bg-pink-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">LS</div>
+          <div>
+            <p class="text-white text-xs font-semibold">Laura Sánchez</p>
+            <p class="text-gray-500 text-xs">Estética Bella Luna · Monterrey</p>
+          </div>
+        </div>
+        <div class="flex gap-0.5 mb-2 text-yellow-400 text-xs">★★★★★</div>
+        <p class="text-gray-300 text-xs leading-relaxed">"Antes solo tenía Instagram. Ahora tengo página con catálogo y mis clientas pueden ver mis servicios antes de llegar. Muy satisfecha con el resultado."</p>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-9 h-9 rounded-full bg-blue-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">RF</div>
+          <div>
+            <p class="text-white text-xs font-semibold">Dr. Roberto Flores</p>
+            <p class="text-gray-500 text-xs">Consultorio Dental · Guadalajara</p>
+          </div>
+        </div>
+        <div class="flex gap-0.5 mb-2 text-yellow-400 text-xs">★★★★★</div>
+        <p class="text-gray-300 text-xs leading-relaxed">"Mis pacientes nuevos llegan por Google gracias al sitio. El diseño es limpio y transmite mucha confianza. Fue la mejor decisión para el consultorio."</p>
+      </div>
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-9 h-9 rounded-full bg-amber-600 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">PM</div>
+          <div>
+            <p class="text-white text-xs font-semibold">Patricia Morales</p>
+            <p class="text-gray-500 text-xs">Cafetería La Canela · Puebla</p>
+          </div>
+        </div>
+        <div class="flex gap-0.5 mb-2 text-yellow-400 text-xs">★★★★★</div>
+        <p class="text-gray-300 text-xs leading-relaxed">"Mucha gente entró por primera vez porque vio mi página. Mi cafetería se ve increíble en internet. El proceso fue muy sencillo y rápido."</p>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-9 h-9 rounded-full bg-green-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">CR</div>
+          <div>
+            <p class="text-white text-xs font-semibold">Carlos Reyes</p>
+            <p class="text-gray-500 text-xs">Emprendedor · Querétaro</p>
+          </div>
+        </div>
+        <div class="flex gap-0.5 mb-2 text-yellow-400 text-xs">★★★★★</div>
+        <p class="text-gray-300 text-xs leading-relaxed">"Pensé que sería muy caro. César me hizo una propuesta justa y en días ya tenía todo listo. Muy buena comunicación durante todo el proceso."</p>
+      </div>
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-9 h-9 rounded-full bg-violet-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">AG</div>
+          <div>
+            <p class="text-white text-xs font-semibold">Ana García</p>
+            <p class="text-gray-500 text-xs">Restaurante La Mesa · Querétaro</p>
+          </div>
+        </div>
+        <div class="flex gap-0.5 mb-2 text-yellow-400 text-xs">★★★★★</div>
+        <p class="text-gray-300 text-xs leading-relaxed">"César explicó todo con claridad y el resultado superó mis expectativas. El sitio se ve muy profesional y carga súper rápido."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ RATING BAR -->
+<section class="bg-black py-10 px-8 border-t border-gray-900">
+  <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-6">
+    <div class="flex items-center gap-4">
+      <div class="w-11 h-11 bg-[#0ABBA5] rounded-full flex items-center justify-center text-black font-black text-xs flex-shrink-0">5★</div>
+      <div>
+        <p class="text-white text-sm font-semibold">Codvyn tiene calificación 5/5 en satisfacción de clientes.</p>
+        <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20quiero%20una%20cotización" target="_blank" rel="noopener"
+           class="text-gray-400 text-xs flex items-center gap-1 mt-1 hover:text-[#0ABBA5] transition-all-200 border border-gray-700 rounded-full px-3 py-1 inline-flex w-fit">Solicitar cotización →</a>
+      </div>
+    </div>
+    <div class="flex gap-1 text-yellow-400 text-2xl">★★★★★</div>
+  </div>
+</section>
+
+<!-- ============================================================ FINAL CTA -->
+<section class="bg-white py-36 px-8">
+  <div class="max-w-5xl mx-auto flex items-center justify-center gap-5 flex-wrap">
+    <div class="bg-gray-100 rounded-full px-10 py-5">
+      <span class="text-4xl font-bold text-gray-900">Haz crecer tu negocio</span>
+    </div>
+    <span class="text-4xl font-bold text-gray-900">con <span class="text-[#0ABBA5]">Codvyn</span></span>
+  </div>
+</section>
+
+<!-- ============================================================ CONTACTO -->
+<section id="contacto" class="bg-black py-24 px-8">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
+    <div>
+      <span class="text-[#0ABBA5] text-xs font-semibold uppercase tracking-widest">Contacto</span>
+      <h2 class="text-white text-4xl font-bold mt-2 mb-4">¿Listo para cotizar?</h2>
+      <p class="text-gray-400 text-base leading-relaxed mb-8">Cuéntame sobre tu negocio y en menos de 24 horas tendrás una propuesta personalizada. Sin compromisos.</p>
+      <div class="space-y-4">
+        <a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20me%20interesa%20cotizar%20una%20página%20web%20para%20mi%20negocio"
+           target="_blank" rel="noopener"
+           class="flex items-center gap-4 bg-gray-900 rounded-2xl p-4 hover:bg-gray-800 transition-all-200 group">
+          <div class="w-10 h-10 bg-green-900 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.543 4.072 1.495 5.787L0 24l6.385-1.467A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.214-3.726.856.873-3.631-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+          </div>
+          <div>
+            <p class="text-white text-sm font-semibold group-hover:text-[#0ABBA5] transition-all-200">WhatsApp</p>
+            <p class="text-gray-400 text-xs">Respuesta en menos de 1 hora</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-600 ml-auto group-hover:text-[#0ABBA5] transition-all-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="mailto:crodriguez010708@gmail.com?subject=Cotización%20página%20web%20—%20Codvyn"
+           class="flex items-center gap-4 bg-gray-900 rounded-2xl p-4 hover:bg-gray-800 transition-all-200 group">
+          <div class="w-10 h-10 bg-blue-900 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <p class="text-white text-sm font-semibold group-hover:text-[#0ABBA5] transition-all-200">Correo electrónico</p>
+            <p class="text-gray-400 text-xs">crodriguez010708@gmail.com</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-600 ml-auto group-hover:text-[#0ABBA5] transition-all-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+    <!-- Formulario -->
+    <form onsubmit="handleForm(event)" class="space-y-4">
+      <div>
+        <label class="text-gray-400 text-xs font-medium block mb-1.5">Nombre</label>
+        <input type="text" required placeholder="Tu nombre" class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200 placeholder-gray-600">
+      </div>
+      <div>
+        <label class="text-gray-400 text-xs font-medium block mb-1.5">Tipo de negocio</label>
+        <select required class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200">
+          <option value="" class="text-gray-600">Selecciona tu tipo de negocio</option>
+          <option>Barbería</option>
+          <option>Estética</option>
+          <option>Consultorio</option>
+          <option>Cafetería</option>
+          <option>Restaurante</option>
+          <option>Emprendedor</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div>
+        <label class="text-gray-400 text-xs font-medium block mb-1.5">¿Qué necesitas?</label>
+        <textarea rows="4" placeholder="Cuéntame brevemente sobre tu negocio y qué tipo de página necesitas..." class="w-full bg-gray-900 border border-gray-800 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-[#0ABBA5] transition-all-200 placeholder-gray-600 resize-none"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-[#0ABBA5] text-black font-semibold py-3 rounded-full text-sm hover:bg-[#09a494] transition-all-200">Enviar mensaje por WhatsApp →</button>
+      <p class="text-gray-600 text-xs text-center">Al enviar, te redirigirá a WhatsApp con tu mensaje listo.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================ FOOTER -->
+<footer class="bg-white border-t border-gray-100 py-12 px-8">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+      <div class="col-span-2 md:col-span-1">
+        <img src="logo.png" alt="Codvyn" class="h-8 w-auto">
+        <p class="text-gray-400 text-xs mt-2 leading-relaxed max-w-[180px]">Páginas web profesionales para hacer crecer tu negocio.</p>
+        <div class="flex items-center gap-3 mt-4 text-gray-400">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="hover:text-[#0ABBA5] transition-all-200">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://wa.me/525515255638" target="_blank" rel="noopener" class="hover:text-[#0ABBA5] transition-all-200">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.543 4.072 1.495 5.787L0 24l6.385-1.467A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.214-3.726.856.873-3.631-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="text-gray-900 font-semibold text-sm mb-4">Servicios</p>
+        <ul class="space-y-2.5 text-xs text-gray-500">
+          <li><a href="#servicios" class="hover:text-gray-800 transition-all-200">Paquete Básico</a></li>
+          <li><a href="#servicios" class="hover:text-gray-800 transition-all-200">Paquete Intermedio</a></li>
+          <li><a href="#servicios" class="hover:text-gray-800 transition-all-200">Personalizado</a></li>
+          <li><a href="#contacto" class="hover:text-gray-800 transition-all-200">Cotización gratis</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-gray-900 font-semibold text-sm mb-4">Sectores</p>
+        <ul class="space-y-2.5 text-xs text-gray-500">
+          <li><a href="#" class="hover:text-gray-800 transition-all-200">Barberías</a></li>
+          <li><a href="#" class="hover:text-gray-800 transition-all-200">Estéticas</a></li>
+          <li><a href="#" class="hover:text-gray-800 transition-all-200">Consultorios</a></li>
+          <li><a href="#" class="hover:text-gray-800 transition-all-200">Cafeterías</a></li>
+          <li><a href="#" class="hover:text-gray-800 transition-all-200">Restaurantes</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-gray-900 font-semibold text-sm mb-4">Contacto</p>
+        <ul class="space-y-2.5 text-xs text-gray-500">
+          <li><a href="https://wa.me/525515255638" target="_blank" rel="noopener" class="hover:text-gray-800 transition-all-200">WhatsApp</a></li>
+          <li><a href="mailto:crodriguez010708@gmail.com" class="hover:text-gray-800 transition-all-200">crodriguez010708@gmail.com</a></li>
+          <li><a href="#portafolio" class="hover:text-gray-800 transition-all-200">Portafolio</a></li>
+          <li><a href="#sobre-nosotros" class="hover:text-gray-800 transition-all-200">Sobre nosotros</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-100 pt-6 flex flex-wrap items-center justify-between gap-4">
+      <p class="text-gray-400 text-xs">© 2025 Codvyn · Todos los derechos reservados.</p>
+      <div class="flex items-center gap-4 text-gray-400 text-xs">
+        <a href="#" class="hover:text-gray-700 transition-all-200">Privacidad</a>
+        <span class="text-gray-200">·</span>
+        <a href="#contacto" class="hover:text-gray-700 transition-all-200">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ WHATSAPP FLOAT -->
+<a href="https://wa.me/525515255638?text=Hola%20Codvyn%2C%20me%20interesa%20cotizar%20una%20página%20web"
+   target="_blank" rel="noopener"
+   title="Cotizar por WhatsApp"
+   class="fixed bottom-6 right-6 w-13 h-13 bg-green-500 rounded-full flex items-center justify-center shadow-xl cursor-pointer hover:bg-green-400 transition-all-200 z-50"
+   style="width:52px;height:52px;">
+  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.1.543 4.072 1.495 5.787L0 24l6.385-1.467A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.214-3.726.856.873-3.631-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+</a>
+
+<script>
+// Navbar: transparente en top, sólido al hacer scroll
+(function() {
+  const nav = document.getElementById('navbar');
+  function updateNav() {
+    if (window.scrollY > 60) {
+      nav.style.background = 'rgba(0,0,0,1)';
+      nav.style.borderBottom = '1px solid rgb(17,17,17)';
+      nav.style.backdropFilter = 'none';
+    } else {
+      nav.style.background = 'rgba(0,0,0,0)';
+      nav.style.borderBottom = 'none';
+      nav.style.backdropFilter = 'blur(4px)';
+    }
+  }
+  window.addEventListener('scroll', updateNav);
+  updateNav();
+})();
+
+function handleForm(e) {
+    e.preventDefault();
+    const form = e.target;
+    const nombre = form.querySelector('input[type=text]').value;
+    const negocio = form.querySelector('select').value;
+    const mensaje = form.querySelector('textarea').value;
+    const texto = encodeURIComponent(
+      `Hola Codvyn, soy ${nombre}.\nNegocio: ${negocio}\n${mensaje}`
+    );
+    window.open(`https://wa.me/525515255638?text=${texto}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
